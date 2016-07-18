@@ -19,9 +19,9 @@ for line in f1:
 		posscore, negscore = float(essential[0]), float(essential[1])
 		for part in essential[-1].split(" "):
 			word = part.split("#")[0]
-			data = (word, posscore, negscore)
+			data =(word, posscore, negscore)
 			print data
-			cur.execute("insert into word values (?, ?, ?)", data)
+			cur.execute("insert into word values(?, ?, ?)", data)
 			conn.commit()
 	except:
 		pass
